@@ -1,0 +1,356 @@
+Use Code,Use Code Category,Use Code Description,Use Class
+10,Multiple Use Property,Condo Multi-Use,Residential (Mixed-Use)
+12,Multiple Use Property,Vacant Land,
+13,Multiple Use Property,Res/Commercial Use,Residential (Mixed-Use)
+19,Multiple Use Property,Res/Exempt Use,Residential (Mixed-Use)
+25,Multiple Use Property,Res/Comm Mixed Use,Residential (Mixed-Use)
+26,Multiple Use Property,Res/Comm Mixed Use,Residential (Mixed-Use)
+27,Multiple Use Property,Res/Comm Mixed Use,Residential (Mixed-Use)
+31,Multiple Use Property,Com Multi-Use,Commercial
+101,Residential Property,Single Fam Dwelling,Residential
+102,Residential Property,Residential Condo,Residential
+103,Residential Property,Mobile Home,Residential
+104,Residential Property,Two-Fam Dwelling,Residential
+105,Residential Property,Three-Fam Dwelling,Residential
+106,Residential Property,Add'l Res Improvement,Residential
+107,Residential Property,Other Residential,Residential
+108,Residential Property,Condo Parking,Residential
+109,Residential Property,Multiple Buildings,Residential
+110,Residential Property,Condo Storage,Residential
+111,Apartment Property,Apt 4-6 Units,Residential
+112,Apartment Property,Apt 7-30 Units,Residential
+113,Apartment Property,Apt 31-99 Units,Residential
+114,Apartment Property,Apt 100+ Units,Residential
+115,Apartment Property,Co-Op Apartment,Residential
+116,Apartment Property,Res Parking Garage,Residential
+117,Apartment Property,Day Care Use,Commercial
+118,Apartment Property,Elderly Home,Residential
+119,Apartment Property,Res Parking Lot,Residential
+120,Apartment Property,Apartment,Residential
+121,Apartment Property,Rooming House,Residential
+122,Apartment Property,Rooming House,Residential
+123,Apartment Property,Residence Hall,Residential
+124,Apartment Property,Dormitory,Residential
+125,Apartment Property,Apt Subsidized Housing,Residential
+126,Apartment Property,Apt Subsidized Housing,Residential
+127,Apartment Property,Apt Subsidized Housing,Residential
+128,Apartment Property,Condo Apartment,Residential
+129,Apartment Property,"Rectory, Convent",Residential
+130,Apartment Property,Vacant Land,Residential
+131,Apartment Property,Vacant Land,Residential
+132,Apartment Property,Vacant Land,Residential
+202,Apartment Property,Vacant Land,Residential
+211,Apartment Property,Vacant Land,Residential
+300,Commercial Property,Hotel/Lodging,Commercial
+301,Commercial Property,Motel,Commercial
+302,Commercial Property,"Inn, Resort, B & B",Commercial
+303,Commercial Property,Priv City Club,Commercial
+304,Commercial Property,Nursing Home,Residential
+305,Commercial Property,Hospital,Commercial
+306,Commercial Property,Laboratory,Commercial
+307,Commercial Property,Veterinary Hospital,Commercial
+309,Commercial Property,Medical Clinic,Commercial
+310,Commercial Property,Laundry Facility,Commercial
+311,Commercial Property,Laundromat,Commercial
+312,Commercial Property,Self Storage Warehouse,Commercial
+313,Commercial Property,Lumber Yard Storage,Commercial
+314,Commercial Property,Truck Terminal,Commercial
+315,Commercial Property,Ancillary Storage,Commercial
+316,Commercial Property,Warehouse,Commercial
+317,Commercial Property,Warehouse,Commercial
+318,Commercial Property,Cold Storage Warehouse,Commercial
+319,Commercial Property,Retail/Office,Commercial
+320,Commercial Property,Retail/Whlsale/Service,Commercial
+321,Commercial Property,Retail Store,Commercial
+322,Commercial Property,Retail Store,Commercial
+323,Commercial Property,Shopping Center,Commercial
+324,Commercial Property,Supermarket,Commercial
+325,Commercial Property,Retail Store,Commercial
+326,Commercial Property,Restaurant/Service,Commercial
+327,Commercial Property,Restaurant/Lounge,Commercial
+328,Commercial Property,Fast Food Restaurant,Commercial
+329,Commercial Property,Bar/Tavern/Pub,Commercial
+330,Commercial Property,Showroom,Commercial
+331,Commercial Property,Auto Supply / Service,Commercial
+332,Commercial Property,Repair Garage,Commercial
+333,Commercial Property,Gas Station,Commercial
+334,Commercial Property,Service Plaza Retail,Commercial
+335,Commercial Property,Car Wash,Commercial
+336,Commercial Property,Parking Garage,Commercial
+337,Commercial Property,Parking Lot,Commercial
+338,Commercial Property,Subterranean Garage,Commercial
+339,Commercial Property,Parking Garage,Commercial
+340,Commercial Property,Office,Commercial
+341,Commercial Property,Bank Building,Commercial
+342,Commercial Property,Medical Office,Commercial
+343,Commercial Property,Office 1-2 Story,Commercial
+344,Commercial Property,Office 3-9 Story,Commercial
+345,Commercial Property,Office Building,Commercial
+346,Commercial Property,Office Building,Commercial
+347,Commercial Property,Office Building,Commercial
+348,Commercial Property,Office Building,Commercial
+350,Commercial Property,Postal Service,Commercial
+351,Commercial Property,Training Facility,Commercial
+352,Commercial Property,Daycare Use,Commercial
+353,Commercial Property,Social Club,Commercial
+354,Commercial Property,Mausoleum,Commercial
+355,Commercial Property,Funeral Home,Commercial
+356,Commercial Property,Comm Condo,Commercial
+357,Commercial Property,Retail Condo,Commercial
+358,Commercial Property,Office,Commercial
+359,Commercial Property,Condo Parking,Commercial
+360,Commercial Property,"Museum, Gallery",Commercial
+361,Commercial Property,Night Club,Commercial
+362,Commercial Property,Movie Theater,Commercial
+363,Commercial Property,Drive-In Theater,Commercial
+364,Commercial Property,Stage Theater,Commercial
+365,Commercial Property,Auditorium / Sport Ctr,Commercial
+366,Commercial Property,Fieldhouse /Track,Commercial
+367,Commercial Property,Race Track,Commercial
+368,Commercial Property,"Fairground, Park",Commercial
+369,Commercial Property,Retail Use,Commercial
+370,Commercial Property,Bowling Alley,Commercial
+371,Commercial Property,Arena Ice Skating,Commercial
+372,Commercial Property,Arena Roller Skating,Commercial
+373,Commercial Property,Swimming Pool,Commercial
+374,Commercial Property,Health Club,Commercial
+375,Commercial Property,Tennis/ Racquet Club,Commercial
+376,Commercial Property,Athletic Facility,Commercial
+377,Commercial Property,Recreation Building,Commercial
+378,Commercial Property,School (Taxable),Commercial
+379,Commercial Property,"Church, Synagogue",Commercial
+380,Commercial Property,Golf Course,Commercial
+381,Commercial Property,Tennis Court(s),Commercial
+382,Commercial Property,"Stable, Kennel",Commercial
+383,Commercial Property,Swimming Pool,Commercial
+384,Commercial Property,Boat House / Marina,Commercial
+385,Commercial Property,Taxable Bldg Only,Commercial
+386,Commercial Property,Campground Facility,Commercial
+387,Commercial Property,Pay Parking Lot,Commercial
+388,Commercial Property,Air Rights Property,Commercial
+389,Commercial Property,Bldg: Chap 61 B Land,Commercial
+390,Commercial Property,Vacant Land,Commercial
+391,Commercial Property,Vacant Land,Commercial
+392,Commercial Property,Vacant Land,Commercial
+393,Commercial Property,Vacant Land,Commercial
+394,Commercial Property,Utility Bldg /Shed,Commercial
+395,Commercial Property,Air Freight Terminal,Commercial
+396,Commercial Property,"Hangar: Storage, Maint",Commercial
+397,Commercial Property,Passenger Terminal,Commercial
+398,Commercial Property,Airport Terminal,Commercial
+399,Commercial Property,Greenhouse,Commercial
+400,Industrial Property,Old Manufacturing,Industrial
+401,Industrial Property,Warehouse,Industrial
+402,Industrial Property,Office/Industrial Use,Industrial
+403,Industrial Property,Manufacturing,Industrial
+404,Industrial Property,Light Mfg / R & D,Industrial
+405,Industrial Property,Industrial Loft,Industrial
+406,Industrial Property,Computer Equip Bldg,Industrial
+407,Industrial Property,Machine Shop,Industrial
+408,Industrial Property,Newspaper Plant,Industrial
+410,Industrial Property,"Mining, Quarrying",Industrial
+412,Industrial Property,Metal Processing,Industrial
+413,Industrial Property,Auto Salvage Yard,Industrial
+414,Industrial Property,Food Process Plant,Industrial
+415,Industrial Property,Bottling Plant,Industrial
+416,Industrial Property,Cannery,Industrial
+417,Industrial Property,Dairy,Industrial
+420,Industrial Property,Tanks: Above Ground,Industrial
+421,Industrial Property,Tanks: Under Ground,Industrial
+422,Industrial Property,Elec Power Plant,Industrial
+423,Industrial Property,Elec Trans R O W,Industrial
+424,Industrial Property,Elec Substation,Industrial
+425,Industrial Property,Gas Manufactr Plant,Industrial
+426,Industrial Property,Gas Pipeline R O W,Industrial
+427,Industrial Property,Gas Storage,Industrial
+428,Industrial Property,Gas Pressure Station,Industrial
+430,Industrial Property,Teleph Exchg Station,Industrial
+431,Industrial Property,Teleph Relay Tower,Industrial
+432,Industrial Property,Cable TV Facility,Industrial
+433,Industrial Property,Radio /TV Trans Facil,Industrial
+435,Industrial Property,Radio TV Studio,Industrial
+436,Industrial Property,Studio/Remote,Industrial
+437,Industrial Property,Telecom Equipment,Industrial
+438,Industrial Property,Telecom Equipment,Industrial
+439,Industrial Property,Bank ATM,Industrial
+440,Industrial Property,Vacant Land,Industrial
+441,Industrial Property,Vacant Land,Industrial
+442,Industrial Property,Vacant Land,Industrial
+445,Industrial Property,Railroad Prop,Industrial
+446,Industrial Property,Utility: Water Sewer,Industrial
+450,Industrial Property,Industrial Condo,Industrial
+465,Industrial Property,Com Billboard,Industrial
+900,Exempt Ownership,U.S. Government,Public & Quasi-Public
+901,Exempt Ownership,Commonwealth of Mass,Public & Quasi-Public
+902,Exempt Ownership,City of Boston,Public & Quasi-Public
+903,Exempt Ownership,Bost Redevelop Auth,Public & Quasi-Public
+904,Exempt Ownership,Priv School /College,Public & Quasi-Public
+905,Exempt Ownership,Charitable Organiztn,Public & Quasi-Public
+906,Exempt Ownership,Religious Organizatn,Public & Quasi-Public
+907,Exempt Ownership,Exempt 121A Property,Public & Quasi-Public
+908,Exempt Ownership,Boston Housing Auth,Public & Quasi-Public
+914,Exempt Ownership,Commonwealth of Mass,Public & Quasi-Public
+923,Exempt Ownership,Commonwealth of Mass,Public & Quasi-Public
+924,Exempt Ownership,Commonwealth of Mass,Public & Quasi-Public
+925,Exempt Ownership,Commonwealth of Mass,Public & Quasi-Public
+937,Exempt Property Type,Dormitory,Residential
+941,Exempt Property Type,Auditorium / Theater,Public & Quasi-Public
+942,Exempt Property Type,Classroom,Public & Quasi-Public
+943,Exempt Property Type,Science Lab,Public & Quasi-Public
+944,Exempt Property Type,Dining Facility/Cafeteria,Public & Quasi-Public
+945,Exempt Property Type,Activity/Social Center,Public & Quasi-Public
+946,Exempt Property Type,Retail Use (Exempt),Commercial
+947,Exempt Property Type,Athletic /Sports Ctr,Public & Quasi-Public
+948,Exempt Property Type,Laundry Facility,Public & Quasi-Public
+949,Exempt Property Type,Storage Area,Public & Quasi-Public
+950,Exempt Property Type,Apartment Bldg,Residential
+951,Exempt Property Type,Dormitory,Residential
+952,Exempt Property Type,Office/Administr Bldg,Public & Quasi-Public
+953,Exempt Property Type,Medical Clinic,Public & Quasi-Public
+954,Exempt Property Type,Medical Office,Public & Quasi-Public
+955,Exempt Property Type,Laboratory,Public & Quasi-Public
+956,Exempt Property Type,Morgue,Public & Quasi-Public
+957,Exempt Property Type,Maintenance/Service Area,Public & Quasi-Public
+958,Exempt Property Type,Rehab/Covales Facility,Public & Quasi-Public
+959,Exempt Property Type,Assisted Living/Elderly,Residential
+960,Exempt Property Type,Exempt Office Condo,Commercial
+961,Exempt Property Type,Parking Garage,Public & Quasi-Public
+962,Exempt Property Type,Parking Lot,Public & Quasi-Public
+963,Exempt Property Type,Utility/Equipment Building,Public & Quasi-Public
+965,Exempt Property Type,Gov't Office Bldg,Public & Quasi-Public
+966,Exempt Property Type,Manufacturing,Industrial
+967,Exempt Property Type,Loft Building/Commercial,Commercial
+968,Exempt Property Type,Warehouse,Public & Quasi-Public
+969,Exempt Property Type,Boat Repair/Storage,Public & Quasi-Public
+970,Exempt Property Type,"Church, Synagogue",Public & Quasi-Public
+971,Exempt Property Type,"Rectory, Convent",Public & Quasi-Public
+972,Exempt Property Type,Correctional Bldg,Public & Quasi-Public
+973,Exempt Property Type,Administrative Bldg,Public & Quasi-Public
+974,Exempt Property Type,Fire Station,Public & Quasi-Public
+975,Exempt Property Type,Police Station,Public & Quasi-Public
+976,Exempt Property Type,School,Public & Quasi-Public
+977,Exempt Property Type,College,Public & Quasi-Public
+978,Exempt Property Type,Library,Public & Quasi-Public
+979,Exempt Property Type,Hospital,Public & Quasi-Public
+980,Exempt Property Type,Water Treatmt Plant,Public & Quasi-Public
+981,Exempt Property Type,Incineration Plant,Public & Quasi-Public
+982,Exempt Property Type,Armory,Public & Quasi-Public
+983,Exempt Property Type,Cemetary,Public & Quasi-Public
+984,Exempt Property Type,Public Beach,Public & Quasi-Public
+985,Exempt Property Type,Other Exempt Bldg,Public & Quasi-Public
+986,Exempt Property Type,Vacant Land,Public & Quasi-Public
+987,Exempt Property Type,Vacant Land,Public & Quasi-Public
+988,Exempt Property Type,Hotel/Convention Center,Commercial
+989,Exempt Property Type,Passenger Terminal,Public & Quasi-Public
+990,Exempt Property Type,Retail Condo,Commercial
+991,Exempt Property Type,Office Condo,Commercial
+992,Exempt Property Type,Residential Condo,Residential
+993,Exempt Property Type,Industrial Condo,Industrial
+995,Exempt Property Type,Condo Main,
+999,Exempt Property Type,Partial Exempt Entity,Public & Quasi-Public
+,,,
+Land Use Codes,,,
+Code,Description,,
+A,Residential 7 or more units,,
+AH,Agricultural/Horticultural,,
+C,Commercial,,
+CC,Commercial condominium,,
+CD,Residential condominium unit,,
+CL,Commercial land,,
+CM ,Condominium main (physical structure housing all related condo units with no assessed value),,
+CP,Condo parking,,
+E,Tax-exempt,,
+EA,Tax-exempt (121A),,
+I,Industrial,,
+R1,Residential 1-family,,
+R2,Residential 2-family,,
+R3,Residential 3-family,,
+R4,Residential 4 or more family,,
+RC,Mixed use (res. and comm.),,
+RL,Residential land,,
+,,,
+Structure Class Codes,,,
+Code,Description,,
+A,Struct Steel,,
+B,Reinforced Concrete,,
+C,Brick/Concrete,,
+D,Wood/Frame,,
+E,Metal,,
+R,Residential,,
+,,,
+Building Style Codes,,,
+Code,Description,Use Class,
+BL,Bi-Level,Residential,
+BW,Bungalow,Residential,
+CL,Colonial,Residential,
+CN,Contemporary,Residential,
+CP,Cape,Residential,
+CV,Conventional,"Residential, Condominium",
+DK,Decker,"Residential, Condominium",
+DX,Duplex,"Residential, Condominium",
+FS,Free Standing,Condominium,
+HR,High Rise,Condominium,
+L,Tri-Level,Residential,
+LR,Low Rise,Condominium,
+MR,Mid Rise,Condominium,
+OT,Other,"Residential, Condominium",
+RE,Row End,"Residential, Condominium",
+RM,Row Middle,"Residential, Condominium",
+RN,Ranch,Residential,
+RR,Raised Ranch,Residential,
+SD,Semi-Detached,"Residential, Condominium",
+SL,Split Level,Residential,
+TD,Tudor,Residential,
+TF,Two-Family Stack,Residential,
+TH,Townhouse,Condominium,
+VT,Victorian,Residential,
+,,,
+Roof Type Codes,,,
+Code,Description,,
+F,Flat,,
+G,Gable,,
+H,Hip,,
+L,Gambrel,,
+M,Mansard,,
+O,Other,,
+S,Shed,,
+,,,
+Exterior Finish Codes,,,
+Code,Description,,
+A,Asbestos,,
+B,Brick/Stone,,
+C,Cement Board,,
+F,Frame/Clapboard,,
+G,Glass,,
+K,Concrete,,
+M,Vinyl,,
+O,Other,,
+P,Asphalt,,
+S,Stucco,,
+U,Aluminum,,
+V,Brick/Stone Veneer,,
+W,Wood Shake,,
+,,,
+Heating Type Codes,,,
+Code,Description,,
+E,Electric,,
+F,Forced Air,,
+N,None,,
+O,Other,,
+P,Heat Pump,,
+S,Space Heater,,
+W,Hot Water,,
+,,,
+AC Type Codes,,,
+Code,Description,,
+C,Central AC,,
+D,Ductless AC,,
+N,None,,
+,,,
+Exterior Condition Codes,,,
+Code,Description,,
+A,Average,,
+E,Excellent,,
+F,Fair,,
+G,Good,,
+P,Poor,,
