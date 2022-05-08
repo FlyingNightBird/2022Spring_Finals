@@ -67,7 +67,7 @@ Heat map by days:
 Heat map by years:  
 ![Image text](image/heat_map_year_h2_Denver.png)  
 The data of Denver helps us verify the conclusion that most types of crimes remain the same tend. So it leads to clear conclusions.  
-##Conclusion:
+### Conclusion:
 * Most types of crimes remain the same tend.  
 * Some types of crimes such as offenses against children/family and investigate property change differently during hours.  
 ### Hypothesis 3: The amount of crimes will increase as the proportion of high-income residents increases and the proportion of low-income residents decreases 
