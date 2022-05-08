@@ -39,7 +39,7 @@ def check_distribution(crime_with_weather):
     normal distribution of rainfall: KstestResult(statistic=0.4726395769907116, pvalue=0.15289699769335774)
     normal distribution of snowfall: KstestResult(statistic=nan, pvalue=nan)
     normal distribution of average temperature: KstestResult(statistic=0.2326268961549014, pvalue=0.8941051469496969)
-    normal distribution of crime amount: KstestResult(statistic=1.0, pvalue=0.0)
+    normal distribution of crime amount: KstestResult(statistic=0.2220134788993403, pvalue=0.9198439569362115)
     """
     u1, u2, u3, u4 = crime_with_weather['PRCP'].mean(), crime_with_weather['SNOW'].mean(), \
                      crime_with_weather['TAVG'].mean(), crime_with_weather['crime_count'].mean()
