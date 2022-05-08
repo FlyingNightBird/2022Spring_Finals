@@ -43,12 +43,12 @@ def check_distribution(crime_with_weather):
     """
     u1, u2, u3, u4 = crime_with_weather['PRCP'].mean(), crime_with_weather['SNOW'].mean(), \
                      crime_with_weather['TAVG'].mean(), crime_with_weather['crime_count'].mean()
-    std1, std2, std3, std4 = crime_with_weather['PRCP'].std(), crime_with_weather['SNOW'].std(), \
+    s1, s2, s3, s4 = crime_with_weather['PRCP'].std(), crime_with_weather['SNOW'].std(), \
                              crime_with_weather['TAVG'].std(), crime_with_weather['crime_count'].std()
-    print('normal distribution of rainfall:', stats.kstest(crime_with_weather['PRCP'], 'norm', (u1, std1)))
-    print('normal distribution of snowfall:', stats.kstest(crime_with_weather['SNOW'], 'norm', (u2, std2)))
-    print('normal distribution of average temperature:', stats.kstest(crime_with_weather['TAVG'], 'norm', (u3, std3)))
-    print('normal distribution of crime amount:', stats.kstest(crime_with_weather['crime_count'], 'norm', (u3, std3)))
+    print('normal distribution of rainfall:', stats.kstest(crime_with_weather['PRCP'], 'norm', (u1, s1)))
+    print('normal distribution of snowfall:', stats.kstest(crime_with_weather['SNOW'], 'norm', (u2, s2)))
+    print('normal distribution of average temperature:', stats.kstest(crime_with_weather['TAVG'], 'norm', (u3, s3)))
+    print('normal distribution of crime amount:', stats.kstest(crime_with_weather['crime_count'], 'norm', (u4, s4)))
 
 
 def holiday_situation(year, data, low, high):
