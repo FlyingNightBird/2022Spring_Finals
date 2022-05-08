@@ -170,9 +170,9 @@ def preprocessing_hypothesis_3() -> pd.DataFrame:
 
     >>> df = preprocessing_hypothesis_3()
     >>> df.shape
-    (6, 11)
+    (89283, 7)
     """
-    boston_bldg_all = pd.read_csv('data/boston_building_inventory.csv')
+    boston_bldg_all = pd.read_csv('data/boston_building_inventory.csv', engine='python')
     boston_bldg_all.head()
     df_boston_bldg = boston_bldg_all[
         ['id', 'building_typology', 'st_name', 'st_name_suf', 'ct_perc_income_200000_or_more',
@@ -197,12 +197,12 @@ def boston_building_category_group_by_street(df_boston_bldg: pd.DataFrame, colum
     :return: dataframe of result
 
     >>> bstn_bldg = preprocessing_hypothesis_3()
-    >>> bldg_by_high_income = boston_bldg_by_category(bstn_bldg, 'ct_perc_income_200000_or_more', 'boston_bldg_by_high_income.csv')
+    >>> bldg_by_high_income = boston_building_category_group_by_street(bstn_bldg, 'ct_perc_income_200000_or_more', 'boston_bldg_by_high_income.csv')
     >>> bldg_by_high_income.shape
-    (2, 3)
-    >>> bldg_by_low_income = boston_bldg_by_category(bstn_bldg, 'ct_perc_low_to_no_income', '')
+    (4075, 1)
+    >>> bldg_by_low_income = boston_building_category_group_by_street(bstn_bldg, 'ct_perc_low_to_no_income', '')
     >>> bldg_by_low_income.shape
-    (2, 3)
+    (4075, 1)
     """
     boston_bldg_by_category = df_boston_bldg[['st_loc', column]].groupby(['st_loc']).agg(['mean'])
     if target_file != '':
@@ -215,7 +215,7 @@ def get_boston_crime() -> pd.DataFrame:
     Load entire crime data in Boston
     :return: dataframe of data
     """
-    return pd.read_csv('data/boston_crime.csv')
+    return pd.read_csv('data/boston_crime.csv', dtype={'SHOOTING': str})
 
 
 def get_building_typology() -> pd.DataFrame:
@@ -234,10 +234,10 @@ def get_crime_group_by_street() -> pd.DataFrame:
     :return: dataframe after grouping by
 
     >>> df = get_crime_group_by_street()
-    >>> df.columns
-    ''
+    >>> list(df.columns)
+    ['street', 'crime_count']
     >>> df.shape
-    (1, 1)
+    (5411, 2)
     """
     data = get_boston_crime()
     data_by_street = data.groupby(['STREET']).size()
@@ -253,10 +253,10 @@ def get_crime_group_by_street_year() -> pd.DataFrame:
     :return: dataframe after grouping by
 
     >>> df = get_crime_group_by_street_year()
-    >>> df.columns
-    ''
+    >>> list(df.columns)
+    ['street', 'year', 'crime_count']
     >>> df.shape
-    (1, 1)
+    (20868, 3)
     """
     data = get_boston_crime()
     data_street_per_year = data.groupby(['STREET', 'YEAR']).size()
@@ -267,7 +267,8 @@ def get_crime_group_by_street_year() -> pd.DataFrame:
 
 def street_avg_group(df_bldg: pd.DataFrame, df_crime_by_street: pd.DataFrame, y_label: str) -> pd.DataFrame:
     """
-    Combine building data and crime data using street info. Group by percentage slot and count the sum of crime
+    Combine building data and crime data using street info. Group by percentage slot and count the sum of crime.
+    Proportion is split by step of 5%.
     :param df_bldg: dataframe of boston building
     :param df_crime_by_street: dataframe of boston crime data
     :param y_label: label used for chart
@@ -278,7 +279,7 @@ def street_avg_group(df_bldg: pd.DataFrame, df_crime_by_street: pd.DataFrame, y_
     >>> boston_bldg_by_high_income = boston_building_category_group_by_street(boston_bldg, 'ct_perc_income_200000_or_more', '')
     >>> df = street_avg_group(boston_bldg_by_high_income, crime_by_street, 'perc_high_income')
     >>> df.shape
-    ()
+    (8, 2)
     """
     df_bldg = df_bldg.reset_index()
     df_bldg.columns = ['street', y_label]
@@ -287,28 +288,30 @@ def street_avg_group(df_bldg: pd.DataFrame, df_crime_by_street: pd.DataFrame, y_
     bldg_group_street_crime = pd.merge(df_bldg, df_crime_by_street)
     bldg_group_street_crime = bldg_group_street_crime.astype({y_label: float})
     bldg_group_street_crime.sort_values(by=y_label, inplace=True)
-    bldg_group_street_crime['chart_group'] = bldg_group_street_crime[y_label].apply(lambda x: int(x / 5))
+    bldg_group_street_crime['chart_group'] = bldg_group_street_crime[y_label].apply(lambda x: int(x / 5) * 5)
     bldg_group_street_crime_group = bldg_group_street_crime.groupby('chart_group').agg(
         {'crime_count': 'sum'}).reset_index()
     bldg_group_street_crime_group.columns = ['group', 'crime_count']
     return bldg_group_street_crime_group
 
 
-def plot_line_chart_for_street_avg_group(df_bldg: pd.DataFrame, df_crime_by_street: pd.DataFrame, y_label: str):
+def plot_line_chart_for_street_avg_group(df_bldg: pd.DataFrame, df_crime_by_street: pd.DataFrame, y_label: str, title: str):
     """
     Plot line chart for Boston crime data group by street
     :param df_bldg: dataframe of boston building
     :param df_crime_by_street: dataframe of boston crime data
     :param y_label: label used for chart
+    :param title: title of chart
     :return: (no return)
     """
     bldg_group_street_crime_group = street_avg_group(df_bldg, df_crime_by_street, y_label)
     plt.figure(figsize=(10, 10))
     plt.plot(bldg_group_street_crime_group['group'], bldg_group_street_crime_group['crime_count'], color='r',
-             label="criminal tend")
-    plt.xlabel(y_label)
-    plt.ylabel("criminal amount")
+             label="Criminal Tend")
+    plt.xlabel('Percentage of People (%)')
+    plt.ylabel("Crime Amount")
     plt.legend(loc="best")
+    plt.title(title)
     plt.show()
 
 
@@ -316,6 +319,8 @@ def preprocessing_hypothesis_4():
     """
     The data preprocessing part of Hypothesis 3. Including data reading, grouping, and saving to file.
     :return: (no return)
+
+    >>> preprocessing_hypothesis_4()
     """
     boston_bldg = pd.read_csv('prep_data/boston_bldg_st.csv')
     boston_bldg_by_building_typology = boston_bldg.groupby(['st_loc', 'building_typology']).size()
@@ -335,14 +340,14 @@ def bldg_typology_crime_count_per_year(df_typology: pd.DataFrame, df_boston_crim
     >>> crime_by_street_year = get_crime_group_by_street_year()
     >>> bldg_typology_2016 = bldg_typology_crime_count_per_year(bldg_typology, crime_by_street_year, 2016)
     >>> bldg_typology_2016.shape
-    ()
+    (21, 2)
     >>> bldg_typology_2200 = bldg_typology_crime_count_per_year(bldg_typology, crime_by_street_year, 2200)
-    >>> bldg_typology_2200.shape
-    ()
+    Traceback (most recent call last):
+    ValueError: Invalid year value
     """
     crime_per_year = df_boston_crime_street_per_year[df_boston_crime_street_per_year.year == year]
-    # if len(crime_per_year) == 0:
-    #     raise
+    if len(crime_per_year) == 0:
+        raise ValueError('Invalid year value')
     typology_crime = df_typology.merge(crime_per_year, left_on='st_loc', right_on='street')
     typology_crime_group = typology_crime.groupby(['typology']).agg({'crime_count': 'sum'})
     typology_crime_group.reset_index(inplace=True)
@@ -356,10 +361,12 @@ def convert_to_perc(the_df: pd.DataFrame) -> pd.DataFrame:
     :param the_df: origin dataframe with amount
     :return: calculated dataframe with percentage
 
-    >>> df = pd.DataFrame([['Garage', 100], ['Hotel', 50]], columns=['typology', '2015'])
+    >>> df = pd.DataFrame([['Garage', 15], ['Hotel', 5]], columns=['typology', '2015'])
     >>> converted_df = convert_to_perc(df)
-    >>> converted_df
-    111
+    >>> converted_df.iloc[0, 2]
+    75.0
+    >>> converted_df.iloc[1, 2]
+    25.0
     """
     df_perc = the_df.copy()
     df_perc['perc'] = the_df.iloc[:, 1] / sum(the_df.iloc[:, 1]) * 100
@@ -379,10 +386,10 @@ def get_crime_nearby(df_typology: pd.DataFrame, typology: str, df_boston_crime: 
     >>> boston_crime = get_boston_crime()
     >>> fire_police_nearby_crime = get_crime_nearby(bldg_typology, 'Fire/Police', boston_crime)
     >>> fire_police_nearby_crime.shape
-    (2,2)
+    (78253, 9)
     >>> hotel_nearby_crime = get_crime_nearby(bldg_typology, 'Hotel', boston_crime)
     >>> hotel_nearby_crime.shape
-    (3,6)
+    (70911, 9)
     """
     fire_typology = df_typology[df_typology['typology'] == typology]
     all_crime = df_boston_crime[
@@ -397,6 +404,17 @@ def extract_offense_group_percentage(nearby_crime_group: pd.DataFrame) -> (list,
     Calculate the percentage of each crime in each year and store in dict
     :param nearby_crime_group:
     :return: year list and the dict of offense group and their percentage in each year
+
+    >>> df = pd.DataFrame([['Aggravated Assault',2015,199], ['Aggravated Assault',2016,296],
+    ... ['Aggravated Assault',2017,327], ['Aggravated Assault',2018,358],
+    ... ['Aggravated Assault',2019,378], ['Aggravated Assault',2020,358],
+    ... ['Aircraft',2015,1], ['Aircraft',2016,1],
+    ... ['Aircraft',2017,4], ['Aircraft',2018,1]], columns=['OFFENSE', 'YEAR', 'COUNT'])
+    >>> y_list, offense_year = extract_offense_group_percentage(df)
+    >>> y_list
+    [2015, 2016, 2017, 2018, 2019, 2020]
+    >>> offense_year
+    {'Aggravated Assault': [99.5, 99.66329966329967, 98.79154078549848, 99.72144846796658, 100.0, 100.0]}
     """
     year = list(range(2015, 2021))
     offenses = set(nearby_crime_group['OFFENSE'])
